@@ -1,9 +1,23 @@
-<div class="sentenceContainer">
+<div>Round 1</div>
+<div
+    (swipeleft)="onSwipe(false)"
+    (swiperight)="onSwipe(true)"
+    class="sentenceContainer">
+
     <div class="callerDiv">{{caller}}</div>
     <div class="policeDiv">Calls Police On</div>
     <div class="targetDiv">{{target}}</div>
     <div class="activityDiv">{{activity}}</div>
 </div>
-<div>Real</div>
-<div>Fake</div>
+<div *ngIf="!isTouch" class="realFake">
+    <div class="fake swipeDirection" (click)="onSwipe(false)"> 
+        <i class="material-icons md-48">undo</i> 
+        <p>Fake</p>
+    </div>
+    <div class="real swipeDirection" (click)="onSwipe(true)">
+        <p>Real</p>
+        <i class="material-icons md-48">redo</i>
+    </div>
+</div>
+
 

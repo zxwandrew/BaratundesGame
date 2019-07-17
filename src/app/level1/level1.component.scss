@@ -2,7 +2,18 @@
     font-size: 4em;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    display: flex;
+    flex-flow: column;
+
+    .material-icons.md-48 {
+        font-size: 1em;
+    }
+
     .sentenceContainer{
+        display: inline-flex;
+        flex-flow: column;
+        align-items: flex-start;
+        margin: 0 auto;
         .callerDiv{
             color: #50A0F3;
         }
@@ -15,5 +26,19 @@
         .activityDiv{
             color: #ECD32C;
         }
+    }
+
+    .realFake{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        user-select: none;
+    }
+    .swipeDirection{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 50%;
+        justify-content: center;
     }
 }

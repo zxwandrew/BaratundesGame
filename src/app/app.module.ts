@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { Level1Component } from './level1/level1.component';
 import { Level2Component } from './level2/level2.component';
 import { Level3Component } from './level3/level3.component';
+import { Level1endComponent } from './level1end/level1end.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Level3Component } from './level3/level3.component';
     HomeComponent,
     Level1Component,
     Level2Component,
-    Level3Component
+    Level3Component,
+    Level1endComponent
   ],
   imports: [
     BrowserModule,

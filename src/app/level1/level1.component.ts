@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 import { SentenceService } from '../sentence.service';
 
 @Component({
@@ -8,19 +9,22 @@ import { SentenceService } from '../sentence.service';
 })
 export class Level1Component implements OnInit {
 
-  sentences: any;
-  size: number;
+  randomSentences: any;
   caller: string;
   target: string;
   activity: string;
-  isTouch:boolean
+  isTouch:boolean;
+  questions: boolean;
+  pos: number = 0;
+  totalNumber: number = 10;
+  currentSentence: any;
+  round1Score: number = 0;
 
-  constructor(private sentenceService:SentenceService) { }
+  constructor(private sentenceService:SentenceService, private router:Router) { }
 
   async ngOnInit() {
     this.isTouch = this.is_touch_device();
-    this.sentences = await this.sentenceService.getSentences();
-    this.size = this.sentences.length;
+    this.randomSentences = await this.sentenceService.getRandomSentences();
     this.populateSentence();
   }
 
@@ -39,12 +43,27 @@ export class Level1Component implements OnInit {
   }
 
   populateSentence(){
-    let pos = Math.floor(Math.random()*this.size)
-    console.log(this.sentences)
-    let sentence = this.sentences[pos];
-    this.caller = sentence.caller;
-    this.target = sentence.target;
-    this.activity = sentence.activity;
+    this.currentSentence= this.randomSentences[this.pos]
+    this.caller = this.currentSentence.caller;
+    this.target = this.currentSentence.target;
+    this.activity = this.currentSentence.activity;
   }
 
+  onSwipe(direction){
+    //swiped true
+    console.log(this.pos, direction, this.currentSentence.real)
+    if(this.currentSentence && this.currentSentence.real===direction){
+      this.round1Score++
+      this.sentenceService.updateSentenceAnswer(this.pos, true)
+    }else{
+      this.sentenceService.updateSentenceAnswer(this.pos, false)
+    }
+    this.pos++
+    if(this.pos<this.totalNumber){
+      this.populateSentence()
+    }else{
+      console.log(this.randomSentences)
+      this.router.navigate(['level1end', {score: this.round1Score}])
+    }
+  }
 }

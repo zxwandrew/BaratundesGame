@@ -1,0 +1,8 @@
+<p>You scored {{score}}/10</p>
+<ul>
+    <li *ngFor="let sentence of randomSentences" class="headline">
+        <i *ngIf="sentence.correct" class="material-icons">check</i>
+        <i *ngIf="!sentence.correct" class="material-icons">close</i>
+        {{sentence.headline}}
+    </li>
+</ul>
