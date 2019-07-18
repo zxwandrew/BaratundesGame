@@ -62,8 +62,7 @@ export class Level1Component implements OnInit {
     if(this.pos<this.totalNumber){
       this.populateSentence()
     }else{
-      console.log(this.randomSentences)
-      this.router.navigate(['level1end', {score: this.round1Score}])
+      this.router.navigate(['level1end'])
     }
   }
 }

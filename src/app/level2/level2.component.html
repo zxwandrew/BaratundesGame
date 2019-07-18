@@ -1,1 +1,14 @@
-<p>level2 works!</p>
+<div>Level 2: Role Reversal. Let's switch up the roles</div>
+
+<div class="sentenceContainer">
+    <div class="callerDiv">{{caller}}</div>
+    <div class="policeDiv">Calls Police On</div>
+    <div class="targetDiv">{{target}}</div>
+    <div class="activityDiv">{{activity}}</div>
+</div>
+<div *ngIf="reverseState" class="fake swipeDirection" (click)="reverse()"> 
+    <i class="material-icons md-48">autorenew</i>
+</div>
+<div *ngIf="!reverseState" class="fake swipeDirection" (click)="next()"> 
+    <i class="material-icons md-48">navigate_next</i>
+</div>

@@ -1,8 +1,15 @@
 <p>You scored {{score}}/10</p>
 <ul>
-    <li *ngFor="let sentence of randomSentences" class="headline">
+    <li *ngFor="let sentence of randomSentences" 
+    title="{{sentence.headline}}" 
+    [class.headline]="true" 
+    [class.fake]="!sentence.real">
         <i *ngIf="sentence.correct" class="material-icons">check</i>
         <i *ngIf="!sentence.correct" class="material-icons">close</i>
-        {{sentence.headline}}
+        <span class="callerDiv">{{sentence.caller}} &nbsp;</span>
+        <span class="policeDiv"> calls police on &nbsp;</span>
+        <span class="targetDiv"> {{sentence.target}} &nbsp;</span>
+        <span class="activityDiv"> {{sentence.activity}} </span>
     </li>
 </ul>
+<div (click)="gotoLevel2()">Continue to next step</div>

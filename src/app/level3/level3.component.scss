@@ -1,0 +1,32 @@
+:host{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-flow: column;
+
+    .sentenceContainer{
+        display: inline-flex;
+        flex-flow: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        .callerDiv{
+            color: #50A0F3;
+        }
+        .policeDiv{
+            color: #68C93B;
+        }
+        .targetDiv{
+            color: #DD434E;
+        }
+        .activityDiv{
+            font-size: 4rem;
+            color: #ECD32C;
+            background: black;
+            border: none;
+        }
+    }
+    .material-icons.md-48 {
+        font-size: 1em;
+    }
+}
