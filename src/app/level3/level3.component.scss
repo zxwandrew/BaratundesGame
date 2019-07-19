@@ -19,12 +19,27 @@
         .targetDiv{
             color: #DD434E;
         }
+        .typewriter{
+            color: #ECD32C;
+        }
+        .typewriter.selected{
+            background-color: rgba(0, 147, 255, 0.42);
+        }
+        .typewriter.hidden{
+            display: none;
+        }
         .activityDiv{
+            display:block;
             font-size: 4rem;
             color: #ECD32C;
             background: black;
             border: none;
+            outline: none;
         }
+        .activityDiv.hidden{
+            display: none
+        }
+
     }
     .material-icons.md-48 {
         font-size: 1em;

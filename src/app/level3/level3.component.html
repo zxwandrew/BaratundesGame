@@ -4,9 +4,17 @@
     <div class="callerDiv">{{reversedcaller}}</div>
     <div class="policeDiv">Calls Police On</div>
     <div class="targetDiv">{{reversedtarget}}</div>
-    <input class="activityDiv" 
+    <div class="typewriter" [ngClass]="{
+        'selected': typewriterState==='selected', 
+        'hidden': typewriterState==='hidden'}">
+        {{typewriterSentence}}</div>
+
+    <input #activityInput
+        [ngClass]="{'hidden': typewriterState!=='hidden'}"
+        class="activityDiv"
         placeholder="{{activity}}"
-        value="{{activity}}"
-        autofocus
-    />
+        autofocus 
+        (keydown)="keyDownFunction($event)" />
+
+    <div (click)="next()">Next</div>
 </div>
