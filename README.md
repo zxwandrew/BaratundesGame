@@ -3,6 +3,7 @@
 Game inspired by Baratunde Thurston
 
 https://www.youtube.com/watch?v=RZgkjEdMbSw
+
 https://www.baratunde.com/livingwhileblack
 
 The data:
