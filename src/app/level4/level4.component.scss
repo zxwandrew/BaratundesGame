@@ -1,0 +1,43 @@
+:host{
+    font-size: 4rem;
+    color: white;
+    display: flex;
+    flex-flow: column;
+
+    .sentenceContainer{
+        display: inline-flex;
+        flex-flow: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        .callerDiv{
+            color: #50A0F3;
+        }
+        .targetDiv{
+            color: #DD434E;
+        }
+        .typewriter{
+            color: #68C93B;
+        }
+        .typewriter.selected{
+            background-color: rgba(0, 147, 255, 0.42);
+        }
+        .typewriter.hidden{
+            display: none;
+        }
+        .actionDiv{
+            display:block;
+            font-size: 4rem;
+            color: #68C93B;
+            background: black;
+            border: none;
+            outline: none;
+        }
+        .actionDiv.hidden{
+            display: none
+        }
+        .activityDiv{
+            color: #ECD32C;
+        }
+
+    }
+}

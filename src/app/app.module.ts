@@ -10,6 +10,7 @@ import { Level3Component } from './level3/level3.component';
 import { Level1endComponent } from './level1end/level1end.component';
 import { Level3endComponent } from './level3end/level3end.component';
 import { Level4Component } from './level4/level4.component';
+import { Level4endComponent } from './level4end/level4end.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Level4Component } from './level4/level4.component';
     Level3Component,
     Level1endComponent,
     Level3endComponent,
-    Level4Component
+    Level4Component,
+    Level4endComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,6 @@ export class Level3Component implements OnInit, AfterViewInit {
   @ViewChild("activityInput", {static:true}) activityInput: ElementRef
 
   realSentences: any[]
-  numReal: number
   pos: number = 0
   currentSentence: any
   reversedcaller: string
@@ -28,7 +27,6 @@ export class Level3Component implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.realSentences = this.sentenceService.getRealSentences()
-    this.numReal = this.realSentences.length
     this.populateCurrentSentence()
     this.typewriterSentence = this.currentSentence.activity
   }

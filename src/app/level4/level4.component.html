@@ -1,1 +1,19 @@
-<p>level4 works!</p>
+<div>Level 4: We need to change the action</div>
+<div class="sentenceContainer">
+    <div class="callerDiv">{{caller}}</div>
+    
+    <div class="typewriter" [ngClass]="{
+        'selected': typewriterState==='selected', 
+        'hidden': typewriterState==='hidden'}">
+        {{typewriterSentence}}</div>
+
+    <input #actionInput  
+    [ngClass]="{'hidden': typewriterState!=='hidden'}"
+    class="actionDiv"
+    placeholder="Called police on"
+    autofocus 
+    (keydown)="keyDownFunction($event)" />
+
+    <div class="targetDiv">{{target}}</div>
+    <div class="activityDiv">{{activity}}</div>
+</div>
