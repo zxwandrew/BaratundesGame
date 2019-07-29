@@ -1,4 +1,4 @@
-<div>Level 1: Real News Or Fake News?</div>
+<div class="levelTitle" >Level 1: Real News Or Fake News?</div>
 <div
     (swipeleft)="onSwipe(false)"
     (swiperight)="onSwipe(true)"
@@ -9,7 +9,7 @@
     <div class="targetDiv">{{target}}</div>
     <div class="activityDiv">{{activity}}</div>
 </div>
-<div *ngIf="!isTouch" class="realFake">
+<div class="realFake">
     <div class="fake swipeDirection" (click)="onSwipe(false)"> 
         <i class="material-icons md-48">undo</i> 
         <p>Fake</p>

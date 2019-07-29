@@ -1,4 +1,4 @@
-<div>Level 3: Make it more Believable</div>
+<div class="levelTitle">Level 3 Believable Reversal: Make the reversal more believable</div>
 
 <div class="sentenceContainer">
     <div class="callerDiv">{{reversedcaller}}</div>
@@ -9,12 +9,8 @@
         'hidden': typewriterState==='hidden'}">
         {{typewriterSentence}}</div>
 
-    <input #activityInput
-        [ngClass]="{'hidden': typewriterState!=='hidden'}"
-        class="activityDiv"
-        placeholder="{{activity}}"
-        autofocus 
-        (keydown)="keyDownFunction($event)" />
-
-    <div (click)="next()">Next</div>
+    <input #activityInput [ngClass]="{'hidden': typewriterState!=='hidden'}" class="activityDiv"
+        placeholder="{{activity}}" autofocus (keydown)="keyDownFunction($event)" />
 </div>
+
+<div (click)="next()">Next</div>

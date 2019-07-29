@@ -1,8 +1,9 @@
 :host{
-    font-size: 4rem;
     color: white;
     display: flex;
     flex-flow: column;
+    height: 100%;
+    justify-content: space-between;
 
     .sentenceContainer{
         display: inline-flex;
@@ -29,7 +30,7 @@
         }
         .activityDiv{
             display:block;
-            font-size: 4rem;
+            font-size: 6vh;
             color: #ECD32C;
             background: black;
             border: none;

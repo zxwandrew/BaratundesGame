@@ -1,9 +1,19 @@
 :host{
-    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     display: flex;
     flex-flow: column;
+    font-size: 2vh;
+    height: 100%;
+    justify-content: space-between;
+    
+    .levelTitle{
+        font-size: 4vh;
+    }
+    ul{
+        padding: 0px;
+        margin: 0 auto;
+    }
     .headline{
         list-style-type: none;
         display: flex;
@@ -12,16 +22,22 @@
     .headline.fake span{
         color: white !important;
     }
-    .callerDiv{
+    .headline .correct{
+        color: green;
+    }
+    .headline .wrong{
+        color: red;
+    }
+    .callerSpan{
         color: #50A0F3;
     }
-    .policeDiv{
+    .policeSpan{
         color: #68C93B;
     }
-    .targetDiv{
+    .targetSpan{
         color: #DD434E;
     }
-    .activityDiv{
+    .activitySpan{
         color: #ECD32C;
     }
 }
