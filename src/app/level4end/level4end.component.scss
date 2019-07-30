@@ -2,17 +2,22 @@
     color: white;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     width: 100%;
+    .levelTitle{
+        color: #50A0F3;
+    }
     .youtube-div{
+        color: #68C93B;
         align-items: center;
         display: flex;
         flex-flow: column;
         text-align: center;
     }
-    .credit{
+    .endCredit{
         font-size: 0.5em;
-        text-align: right;
+        text-align: center;
+        color: #DD434E;
     }
 }

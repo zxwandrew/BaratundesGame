@@ -12,6 +12,10 @@ import { Level3endComponent } from './level3end/level3end.component';
 import { Level4Component } from './level4/level4.component';
 import { Level4endComponent } from './level4end/level4end.component';
 
+import {MatButtonModule} from '@angular/material/button';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,9 @@ import { Level4endComponent } from './level4end/level4end.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

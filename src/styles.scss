@@ -8,6 +8,16 @@ html, body{
     color:white;
     font-size: 6vh;
 }
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 .levelTitle{
     text-align: center;
+}
+.nextContainer{
+    display:flex;
+    justify-content: center;
+}
+.nextButton{
+    background-color: #ECD32C;
+    color: black;
 }
