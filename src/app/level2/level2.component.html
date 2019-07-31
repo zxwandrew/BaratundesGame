@@ -1,9 +1,17 @@
 <div class="levelTitle">Level 2 Role Reversal: Let's switch up the roles</div>
 
 <div class="sentenceContainer">
-    <div class="callerDiv">{{caller}}</div>
+    <div [ngClass]="{
+        'callerDiv': true,
+        'before': reverseState,
+        'after': !reverseState}">
+        {{caller}}</div>
     <div class="policeDiv">Calls Police On</div>
-    <div class="targetDiv">{{target}}</div>
+    <div [ngClass]="{
+        'targetDiv': true,
+        'before': reverseState,
+        'after': !reverseState}">
+        {{target}}</div>
     <div class="activityDiv">{{activity}}</div>
 </div>
 <div *ngIf="reverseState" class="fake swipeDirection" (click)="reverse()">

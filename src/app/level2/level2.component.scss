@@ -17,13 +17,30 @@
         }
         .policeDiv{
             color: #68C93B;
+            order: 2;
         }
         .targetDiv{
             color: #DD434E;
         }
         .activityDiv{
             color: #ECD32C;
+            order: 4;
         }
+        .callerDiv.before{
+            order: 1;
+        }
+        .targetDiv.before{
+            order: 3;
+        }
+        .callerDiv.after{
+            order: 3;
+        }
+        .targetDiv.after{
+            order: 1;
+        }
+    }
+    .sentenceContainer *{
+        transition: all 5s linear;
     }
     .material-icons.md-48 {
         font-size: 1em;

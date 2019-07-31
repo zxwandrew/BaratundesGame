@@ -18,6 +18,7 @@ export class Level4Component implements OnInit {
   target: any;
   caller: any;
   activity: any;
+  nextDisabled: boolean = true;
 
   constructor(
     private sentenceService: SentenceService,
@@ -69,6 +70,7 @@ export class Level4Component implements OnInit {
     setTimeout(()=>{
       this.typewriterState="hidden"
       this.activityInput.nativeElement.focus()
+      this.nextDisabled = false
     }, 5000)
   }
 

@@ -18,6 +18,7 @@ export class Level3Component implements OnInit, AfterViewInit {
   activity: string
   typewriterSentence: string = ""
   typewriterState: string = ""
+  nextDisabled: boolean = true
 
   constructor(
     private sentenceService: SentenceService,
@@ -69,11 +70,11 @@ export class Level3Component implements OnInit, AfterViewInit {
     setTimeout(()=>{
       this.typewriterState="hidden"
       this.activityInput.nativeElement.focus()
+      this.nextDisabled = false
     }, 5000)
   }
 
   keyDownFunction(event) {
-    console.log("key", event.keyCode)
     if(event.keyCode == 13) {
       this.next()
     }

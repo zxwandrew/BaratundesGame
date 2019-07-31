@@ -14,7 +14,7 @@
     <div class="activityDiv">{{activity}}</div>
 </div>
 <div class="nextContainer">
-    <button (click)="next()" class="nextButton" mat-raised-button>
+    <button (click)="next()" class="nextButton" mat-raised-button [disabled]="nextDisabled">
         Next
     </button>
 </div>
