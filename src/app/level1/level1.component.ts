@@ -51,7 +51,7 @@ export class Level1Component implements OnInit {
 
   onSwipe(direction){
     //swiped true
-    console.log(this.pos, direction, this.currentSentence.real)
+    // console.log(this.pos, direction, this.currentSentence.real)
     if(this.currentSentence && this.currentSentence.real===direction){
       this.round1Score++
       this.sentenceService.updateSentenceAnswer(this.pos, true)

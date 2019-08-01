@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit() {
     this.sentences = await this.sentenceService.getSentences()
-    console.log(this.sentences)
   }
 
 }

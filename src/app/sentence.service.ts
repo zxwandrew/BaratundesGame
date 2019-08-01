@@ -132,7 +132,6 @@ export class SentenceService {
                     let filtered = res.filter((val)=>{
                         return !!val
                     })
-                    console.log(filtered); 
                     return filtered
                 })
             })

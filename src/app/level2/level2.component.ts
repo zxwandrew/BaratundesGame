@@ -87,7 +87,6 @@ export class Level2Component implements OnInit {
     
     if(heightDiff>0){
       //caller is taller
-      console.log("here")
       this.callerOffset = offsetAmount-heightDiff +"px"
       this.targetOffset = -offsetAmount +"px"
       this.actionOffset = -heightDiff +"px"
