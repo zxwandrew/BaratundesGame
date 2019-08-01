@@ -1,16 +1,16 @@
 <div class="levelTitle">Level 2 Role Reversal: Let's switch up the roles</div>
 
 <div class="sentenceContainer">
-    <div [ngClass]="{
-        'callerDiv': true,
-        'before': reverseState,
-        'after': !reverseState}">
+    <div #callerContainer [ngClass]="{'callerDiv': true}"
+        [@flip]="{value: reverseState ? 'callerTop' : 'callerBottom', params: {offset: callerOffset}}">
         {{caller}}</div>
-    <div class="policeDiv">Calls Police On</div>
-    <div [ngClass]="{
-        'targetDiv': true,
-        'before': reverseState,
-        'after': !reverseState}">
+
+    <div class="policeDiv"
+    [@flip]="{value: reverseState ? 'actionNormal' : 'actionShifted', params: {offset: actionOffset}}">
+    Calls Police On</div>
+
+    <div #targetContainer [ngClass]="{'targetDiv': true}"
+        [@flip]="{value: reverseState ? 'targetBottom' : 'targetTop', params: {offset: targetOffset}}">
         {{target}}</div>
     <div class="activityDiv">{{activity}}</div>
 </div>
@@ -18,8 +18,8 @@
     <i class="material-icons md-48">autorenew</i>
 </div>
 <div *ngIf="!reverseState" class="fake swipeDirection nextContainer" (click)="next()">
-    <button (click)="gotoLevel2()" class="nextButton" mat-raised-button>
-        <i class="material-icons md-48">navigate_next</i>
+    <button class="nextButton" mat-raised-button>
         Next
+        <i class="material-icons md-48">navigate_next</i>
     </button>
 </div>

@@ -14,33 +14,19 @@
         margin: 0 auto;
         .callerDiv{
             color: #50A0F3;
+            position: relative;
         }
         .policeDiv{
             color: #68C93B;
-            order: 2;
+            position: relative;
         }
         .targetDiv{
             color: #DD434E;
+            position: relative;
         }
         .activityDiv{
             color: #ECD32C;
-            order: 4;
         }
-        .callerDiv.before{
-            order: 1;
-        }
-        .targetDiv.before{
-            order: 3;
-        }
-        .callerDiv.after{
-            order: 3;
-        }
-        .targetDiv.after{
-            order: 1;
-        }
-    }
-    .sentenceContainer *{
-        transition: all 5s linear;
     }
     .material-icons.md-48 {
         font-size: 1em;
