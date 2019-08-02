@@ -13,7 +13,6 @@ export class Level1endComponent implements OnInit {
   score: any;
   constructor(
     private sentenceService: SentenceService,
-    private route: ActivatedRoute, 
     private router:Router
     ) { }
 

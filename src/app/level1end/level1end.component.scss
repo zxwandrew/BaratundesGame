@@ -23,22 +23,23 @@
         color: white !important;
     }
     .headline .correct{
-        color: green;
+        color: #68C93B;
     }
     .headline .wrong{
         color: red;
     }
-    .callerSpan{
+    p {
         color: #50A0F3;
     }
-    .policeSpan{
-        color: #68C93B;
-    }
-    .targetSpan{
+    .realLink{
         color: #DD434E;
+        text-decoration: none;
     }
-    .activitySpan{
-        color: #ECD32C;
+    .fakeLink{
+        color: white;
+    }
+    .material-icons.md-12 {
+        font-size: 1em;
     }
     .nextButton{
         font-size: initial;
