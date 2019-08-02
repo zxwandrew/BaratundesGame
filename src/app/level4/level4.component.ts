@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./level4.component.scss']
 })
 export class Level4Component implements OnInit {
-  @ViewChild("actionInput", {static:true}) activityInput: ElementRef
+  @ViewChild("actionInput", {static:true}) actionInput: ElementRef
 
   typewriterState: string;
   typewriterSentence: string;
@@ -22,7 +22,6 @@ export class Level4Component implements OnInit {
 
   constructor(
     private sentenceService: SentenceService,
-    private route: ActivatedRoute,
     private router: Router
   ) { }
 
@@ -45,13 +44,12 @@ export class Level4Component implements OnInit {
   }
 
   typeWriter() {
-    //old activity and highlight
-    // this.typewriterSentence = this.currentSentence.activity
+    //old action and highlight
     setTimeout(() => {
       this.typewriterState = "selected"
     }, 1000)
 
-    //remove old activity and highlighting
+    //remove old action and highlighting
     setTimeout(() => {
       this.typewriterSentence = ""
       this.typewriterState = ""
@@ -69,21 +67,23 @@ export class Level4Component implements OnInit {
     //hide tyepwriter and show
     setTimeout(()=>{
       this.typewriterState="hidden"
-      this.activityInput.nativeElement.focus()
+      this.actionInput.nativeElement.focus()
       this.nextDisabled = false
     }, 5000)
   }
 
   keyDownFunction(event) {
+    this.nextDisabled = false
     if(event.keyCode == 13) {
       this.next()
     }
   }
 
   next(){
+    this.nextDisabled = true
     this.pos++;
-    if(this.pos<=3){
-      this.activityInput.nativeElement.value = ""
+    if(this.pos<3){
+      this.actionInput.nativeElement.value = ""
       this.populateCurrentSentence()
     }else{
       this.router.navigate(['level4end'])

@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'level3end', component: Level3endComponent},
   { path: 'level4', component: Level4Component},
   { path: 'level4end', component: Level4endComponent},
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

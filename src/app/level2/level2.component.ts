@@ -105,7 +105,7 @@ export class Level2Component implements OnInit {
   }
   next(){
     this.populateCurrentSentence()
-    if(this.pos>3){
+    if(this.pos>=3){
       this.router.navigate(['level3'])
     }
   }

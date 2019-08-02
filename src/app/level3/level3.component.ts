@@ -22,7 +22,6 @@ export class Level3Component implements OnInit, AfterViewInit {
 
   constructor(
     private sentenceService: SentenceService,
-    private route: ActivatedRoute,
     private router: Router
   ) { }
 
@@ -70,18 +69,19 @@ export class Level3Component implements OnInit, AfterViewInit {
     setTimeout(()=>{
       this.typewriterState="hidden"
       this.activityInput.nativeElement.focus()
-      this.nextDisabled = false
     }, 5000)
   }
 
   keyDownFunction(event) {
+    this.nextDisabled = false
     if(event.keyCode == 13) {
       this.next()
     }
   }
   next(){
+    this.nextDisabled = true
     this.pos++;
-    if(this.pos<=3){
+    if(this.pos<3){
       this.activityInput.nativeElement.value = ""
       this.populateCurrentSentence()
     }else{
